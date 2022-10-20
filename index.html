@@ -1,1 +1,74 @@
 Hwllo!Worild
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テキストにスタイル設定</title>
+    <style>
+        /*これはCSSのコメントです*/
+        /*
+        複数行コメント
+        書くことができる
+        終了タグ書き忘れるとフォントサイズ
+        だけがコメント扱いされる
+        */
+        h1 {
+            font-size: 2.5em;
+            font-family:cursive;
+            color: #00ffff;
+        }
+        h2 {
+            font-size:2.0em;
+            font-family:fantasy;
+            color: rgb(0, 255, 128);
+        }
+        p {
+            font-size:1.2hem;
+            font-family:sans-serif;
+            color: blue;
+        }
+        span {
+            font:bold italic 1.7em serif;
+            background-color: magenta;
+            color: white !important;
+            /*
+            ！mportant　これが一番最強
+            id はめっちゃ使える
+            */
+        }
+        h3 {
+            font-size: 2.0em;
+            color: #ffffff;
+            background-color: #000000;
+        }
+        #ab4D {
+            color: #000000;
+            font-size: 2em;
+        }
+        h4 {
+            background-color: #000000;
+        }
+        .shiro {
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <!--これはコメントです-->
+    <h1>Hello!OSSY</h1>
+    <h1 id="ab4D">Hello!OSSY</h1>
+    <H2>HelloOSSY不思議アッカーマン</H2><!-- 英語だけがフォントサイズが適応される -->
+    <p>This is <span>Sample</span> content.</p>
+    <h3>fateコラボ希望</h3>
+    <!--タグに直書きの方が優先される-->
+    <h3 style="color: #00ff00; font-size: 300%"> どんぐりぐりぐり</h3>
+    <h4>1</h4>
+    <h4 class="shiro">2</h4>
+    <h4 class="shiro">3</h4>
+    <h4>4</h4>
+</body>
+</html>
