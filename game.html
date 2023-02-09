@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ランダム？キーワード</title>
+    <body onload="inter()" style.backgroundColor="#000000"> 
+    
+    <li><a href="main.html">ホームページに戻る</a></li><br>
+    <a>停止ボタンをダブルクリックすると再スタートが出来ます。</a>
+    <p onclick="luck()"> 確定</p>
+    <input type="button" id="votan" onclick="exec()" ondblclick="ok()" value="停止"><br>
+    <button id="votan2" onclick="inter()"  disabled>スタート</button>
+    <input class="box1">
+    <input class="box2" type="text">
+    <input class="box3" type="text">
+    <div id="nou" class="bocc"></div>
+    <div id="nom" class="bocc2"></div>
+    <div id="noe" class="bocc3"></div>
+    <style>
+        a {
+            font-size: 25px;
+            color: #49ca74;
+        }
+        .box1 {
+        width:15vw;
+        height: 25vw;
+        background-color: #49ca74;
+        position: absolute;
+        top: 25%;
+        left: 21%;
+    }
+    .box2 {
+        width:15vw;
+        height: 25vw;
+        background-color: #49ca74;
+        position: absolute;
+        top: 25%;
+        left: 46%;
+    }
+    .box3 {
+        width:15vw;
+        height: 25vw;
+        background-color: #49ca74;
+        position: absolute;
+        top: 25%;
+        left: 69%;
+    }
+    body {
+        background-color: black;
+
+    }
+    .bocc {
+        font-size: 111px;
+        position: absolute;
+        top: 40%;
+        left: 27%;
+    }
+    .bocc2 {
+        font-size: 111px;
+        position: absolute;
+        top: 40%;
+        left: 51%;
+    }
+    .bocc3 {
+        font-size: 111px;
+        position: absolute;
+        top: 40%;
+        left: 75%;
+    }
+    #votan {
+        width:15vw;
+        height: 15vw;
+        font-size: 50px;
+    }
+    #votan2 {
+        width:15vw;
+        height: 15vw;
+        font-size: 50px;
+    }
+
+    </style>
+    <script>
+        var slot = ["6","c","r","i","k","3","d","p","y","7","t","5","v","x","w","o","m","z","4","1","u","6","g","2","n","b","q","f","9","j","a","l","8","q","s","h","e","d"];
+        function ran() {
+            document.getElementById("nou").innerHTML = slot[Math.floor(Math.random() * slot.length)];
+            var len = document.getElementById("nou").innerHTML;
+            document.getElementById("nom").innerHTML = slot[Math.floor(Math.random() * slot.length)];
+            var len = document.getElementById("nom").innerHTML;
+            document.getElementById("noe").innerHTML = slot[Math.floor(Math.random() * slot.length)];
+            var len = document.getElementById("noe").innerHTML;
+        }
+
+        function inter() {
+            interId = setInterval(ran, 50);
+            const bour = document.getElementById("votan2");
+            bour.disabled = "disabled";
+        }
+        function exec() {
+            clearInterval(interId);
+        }
+        function ok() {
+            const bour = document.getElementById("votan2");
+            bour.disabled = null;
+            alert("再スタートができます")
+        }
+        function luck() {
+            exec();
+            document.getElementById("nou").innerHTML = 7;
+            document.getElementById("nom").innerHTML = 7;
+            document.getElementById("noe").innerHTML = 7;
+        }
+    </script>
+</head>
+
+    
+   
+</body>
+</html>
